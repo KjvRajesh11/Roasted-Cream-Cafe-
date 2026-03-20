@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – Roasted Cream</title>
+  <meta name="theme-color" content="#fff8f1" />
+  
+  <!-- Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            surface: '#fff8f1',
+            'surface-container': '#f5ede1',
+            'surface-container-high': '#ede3d7',
+            'surface-container-highest': '#e3d8cb',
+            'primary-container': '#3c2f2f',
+            'on-primary-container': '#f5ede1',
+            secondary: '#99462a',
+            'on-secondary': '#ffffff',
+            'secondary-container': '#ffdad0',
+            'on-secondary-container': '#3c0f00',
+            outline: '#857468',
+            'outline-variant': '#d6c4b5',
+            error: '#ba1a1a',
+            'on-surface': '#201a17',
+            'on-surface-variant': '#534840',
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            xl: '1rem',
+            '2xl': '1.5rem',
+            '3xl': '2rem',
+          },
+          boxShadow: {
+            ambient: '0 4px 32px 0 rgba(60,47,47,0.08)',
+            'ambient-lg': '0 8px 48px 0 rgba(60,47,47,0.12)',
+            'ghost': '0 24px 48px 0 rgba(38,26,26,0.06)',
+          },
+        },
+      },
+    };
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+  
+  <style>
+    /* Specific overrides for login page based on DESIGN.md */
+    .login-input {
+      background-color: var(--surface-container-high);
+      border: 1px solid transparent; 
+      transition: all 0.3s ease;
+    }
+    .login-input:focus {
+      background-color: rgba(255, 248, 241, 0.8); /* simulate surface-container-lowest */
+      border-color: rgba(153, 70, 42, 0.4); /* secondary at 40% (ghost border) */
+      outline: none;
+    }
+    .login-btn {
+      background: var(--secondary);
+      color: white;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      /* Removes default shadow if any, ensures pure scale up with ambient cast */
+    }
+    .login-btn:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 24px rgba(153, 70, 42, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased min-h-screen flex items-center justify-center relative overflow-hidden">
+  
+  <!-- Ambient grain overlay for tactile feel -->
+  <div class="grain-overlay absolute inset-0 z-[1] pointer-events-none"></div>
+
+  <!-- Soft gradient element for asymmetric breathing room & depth -->
+  <div class="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-surface-container opacity-60 blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-secondary-container opacity-30 blur-3xl pointer-events-none"></div>
+
+  <!-- Back to home -->
+  <a href="index.html" class="absolute top-6 left-6 z-20 flex items-center gap-2 text-on-surface-variant hover:text-secondary text-sm font-medium transition-colors">
+    <span class="material-symbols-outlined text-xl" style="font-variation-settings:'wght' 300">arrow_back</span>
+    Back to Home
+  </a>
+
+  <!-- Login Container -->
+  <div class="relative z-10 w-full max-w-md px-5 md:px-0">
+    
+    <!-- Branding -->
+    <div class="flex flex-col items-center mb-8">
+      <div class="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center shadow-ambient mb-4 hover:-translate-y-1 transition-transform">
+        <span class="material-symbols-outlined text-white text-2xl" style="font-variation-settings:'FILL' 1">local_cafe</span>
+      </div>
+      <h1 class="font-display font-800 text-3xl text-primary-container tracking-tight text-center">
+        Welcome back to<br>Roasted <span class="text-secondary">Cream</span>
+      </h1>
+    </div>
+
+    <!-- Login Card -->
+    <div class="bg-surface-container rounded-[1.5rem] p-8 md:p-10 shadow-ghost relative overflow-hidden">
+      <!-- Inner grain for the card (tactile soul) -->
+      <div class="grain-overlay-sm absolute inset-0 rounded-[1.5rem] pointer-events-none opacity-40"></div>
+      
+      <form id="login-form" class="relative z-10 flex flex-col gap-5" novalidate>
+        
+        <div class="flex flex-col gap-2">
+          <label for="login-id" class="font-display text-[0.82rem] font-600 tracking-wide uppercase text-on-surface-variant">Email or Phone</label>
+          <input type="text" id="login-id" class="login-input w-full rounded-lg px-4 py-3.5 text-primary-container font-medium placeholder-on-surface-variant/50" placeholder="hello@example.com" autocomplete="username" required>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <div class="flex justify-between items-center">
+            <label for="login-pass" class="font-display text-[0.82rem] font-600 tracking-wide uppercase text-on-surface-variant">Password</label>
+            <a href="#" class="text-xs font-medium text-secondary hover:underline underline-offset-2 opacity-90">Forgot password?</a>
+          </div>
+          <input type="password" id="login-pass" class="login-input w-full rounded-lg px-4 py-3.5 text-primary-container font-medium placeholder-on-surface-variant/50" placeholder="••••••••" autocomplete="current-password" required>
+        </div>
+
+        <button type="submit" class="login-btn w-full rounded-lg py-3.5 font-display font-700 text-[0.95rem] mt-2 flex items-center justify-center gap-2">
+          Log In
+          <span class="material-symbols-outlined text-[1.2rem]">login</span>
+        </button>
+
+      </form>
+
+      <div class="relative z-10 mt-8 text-center text-sm">
+        <span class="text-on-surface-variant">Don't have an account?</span>
+        <a href="#" class="font-600 text-secondary hover:underline underline-offset-2 ml-1">Sign up</a>
+      </div>
+    </div>
+
+    <!-- Social Proof -->
+    <div class="text-center mt-8 pt-4 border-t border-outline-variant/30 relative z-10">
+      <div class="inline-flex items-center gap-2 text-on-surface-variant/80 text-xs font-semibold uppercase tracking-widest">
+        <span class="material-symbols-outlined text-amber-500 text-[1.1rem]" style="font-variation-settings:'FILL' 1">stars</span>
+        Join 10,000+ happy guests
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module">
+    import { showToast } from './js/utils.js';
+
+    /*
+    // ════════════ SUPABASE AUTH STUB ════════════
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+    const supabaseUrl = 'YOUR_SUPABASE_URL';
+    const supabaseKey = 'YOUR_SUPABASE_ANON_KEY';
+    const supabase = createClient(supabaseUrl, supabaseKey);
+    */
+
+    const loginForm = document.getElementById('login-form');
+    const loginBtn = loginForm.querySelector('button[type="submit"]');
+
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const loginId = document.getElementById('login-id').value.trim();
+      const loginPass = document.getElementById('login-pass').value.trim();
+
+      // Client-side validation
+      if (!loginId) {
+        showToast('Please enter your email or phone number.', 'error');
+        return;
+      }
+      if (loginPass.length < 6) {
+        showToast('Password must be at least 6 characters.', 'error');
+        return;
+      }
+
+      // Visual feedback state
+      const originalText = loginBtn.innerHTML;
+      loginBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[1.2rem]">progress_activity</span> Logging in...';
+      loginBtn.disabled = true;
+      loginBtn.style.opacity = '0.8';
+
+      /* 
+      // Replace dummy timeout below with actual Supabase Auth:
+      try {
+        const { data, error } = await supabase.auth.signInWithPassword({
+          email: loginId, // (Handle phone logic specifically if using SMS OTP)
+          password: loginPass
+        });
+        
+        if (error) throw error;
+        showToast('Welcome back!', 'success');
+        setTimeout(() => window.location.href = 'index.html', 1500);
+      } catch (err) {
+        showToast(err.message, 'error');
+        loginBtn.innerHTML = originalText;
+        loginBtn.disabled = false;
+        loginBtn.style.opacity = '1';
+      }
+      */
+
+      // Dummy timeout implementation for testing
+      setTimeout(() => {
+        showToast('Welcome back!', 'success');
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 1200);
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
