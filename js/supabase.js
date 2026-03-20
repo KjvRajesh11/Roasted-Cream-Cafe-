@@ -100,3 +100,46 @@ export async function fetchOrdersByPhone(phone) {
 
   return { data: data || [], error };
 }
+
+/* ─── Authentication Methods ─── */
+
+export async function signInWithOtp(phone) {
+  const db = getSupabaseClient();
+  if (!db) return { error: { message: 'Supabase not configured. Using local fallback mode.' } };
+  return await db.auth.signInWithOtp({ phone });
+}
+
+export async function verifyOtp(phone, otp) {
+  const db = getSupabaseClient();
+  if (!db) return { error: { message: 'Local mode.' } };
+  return await db.auth.verifyOtp({ phone, token_hash: otp, type: 'sms' });
+}
+
+export async function signInWithGoogle() {
+  const db = getSupabaseClient();
+  if (!db) return { error: { message: 'Supabase not configured.' } };
+  return await db.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: window.location.href } });
+}
+
+export async function signOut() {
+  const db = getSupabaseClient();
+  if (!db) {
+    localStorage.removeItem('rc_user');
+    window.location.reload();
+    return;
+  }
+  return await db.auth.signOut();
+}
+
+export async function getUser() {
+  const db = getSupabaseClient();
+  if (!db) return JSON.parse(localStorage.getItem('rc_user'));
+  const { data: { user } } = await db.auth.getUser();
+  return user;
+}
+
+export function onAuthStateChange(callback) {
+  const db = getSupabaseClient();
+  if (!db) return;
+  db.auth.onAuthStateChange(callback);
+}

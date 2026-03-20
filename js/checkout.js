@@ -31,12 +31,42 @@ function genOrderId() {
 }
 
 /* ─── Open Checkout Modal ─── */
-window.openCheckoutModal = function () {
+window.openCheckoutModal = async function () {
   const cart = window.getCart ? window.getCart() : [];
   if (!cart || cart.length === 0) {
     alert('Your cart is empty! Add some items first.');
     return;
   }
+
+  // Auth Gating
+  const db = getSupabase();
+  let user = null;
+  if (db) {
+    const { data } = await db.auth.getUser();
+    user = data?.user;
+  }
+
+  if (!user && window.openLoginModal && db && RC_CONFIG.supabaseUrl !== 'YOUR_SUPABASE_URL') {
+    window.openLoginModal(() => {
+      window.openCheckoutModal();
+    });
+    return;
+  }
+
+  const isGuest = !user;
+  const payBtn = document.getElementById('btn-razorpay');
+  if (payBtn) {
+    if (isGuest && db && RC_CONFIG.supabaseUrl !== 'YOUR_SUPABASE_URL') {
+      payBtn.disabled = true;
+      payBtn.style.opacity = '0.5';
+      payBtn.innerHTML = `<span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">lock</span> Login to Pay Online`;
+    } else {
+      payBtn.disabled = false;
+      payBtn.style.opacity = '1';
+      payBtn.innerHTML = `<span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">credit_card</span> Pay Online (Card / UPI / Wallet)`;
+    }
+  }
+
   renderCheckoutSummary(cart);
   const modal = document.getElementById('checkout-modal');
   const inner = document.getElementById('checkout-modal-inner');
