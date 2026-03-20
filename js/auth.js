@@ -1,4 +1,7 @@
-import { signInWithOtp, verifyOtp, signInWithGoogle, getSupabaseClient } from './supabase.js';
+import { signInWithOtp, verifyOtp, signInWithGoogle, getSupabaseClient, insertOrder } from './supabase.js';
+
+window.rcGetSupabaseClient = getSupabaseClient;
+window.rcInsertOrder = insertOrder;
 import { showToast } from './utils.js';
 
 let authCallback = null;
@@ -73,9 +76,9 @@ export async function updateHeaderAuthUI() {
   
   btns.forEach(btn => {
     if (user) {
-      const phone = user.phone ? user.phone.replace('+91', '') : '';
-      const display = phone || user.email?.split('@')[0] || 'User';
-      btn.innerHTML = `<span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 1">person</span>Hi, ${display}`;
+      const phoneStr = user.phone ? user.phone.slice(-4) : '';
+      const display = phoneStr ? `${phoneStr}` : (user.email?.split('@')[0] || 'User');
+      btn.innerHTML = `<span class="material-symbols-outlined text-[1.1rem]" style="font-variation-settings:'FILL' 1">person</span>Hi, ${display}`;
       btn.onclick = async () => {
         if (confirm('Do you want to logout?')) {
           await db.auth.signOut();
@@ -83,7 +86,7 @@ export async function updateHeaderAuthUI() {
         }
       };
     } else {
-      btn.innerHTML = `<span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 0">person</span>Login`;
+      btn.innerHTML = `<span class="material-symbols-outlined text-[1.1rem]" style="font-variation-settings:'FILL' 0">person</span>Login`;
       btn.onclick = () => openLoginModal();
     }
   });

@@ -112,7 +112,7 @@ export async function signInWithOtp(phone) {
 export async function verifyOtp(phone, otp) {
   const db = getSupabaseClient();
   if (!db) return { error: { message: 'Local mode.' } };
-  return await db.auth.verifyOtp({ phone, token_hash: otp, type: 'sms' });
+  return await db.auth.verifyOtp({ phone, token: otp, type: 'sms' });
 }
 
 export async function signInWithGoogle() {

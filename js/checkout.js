@@ -31,32 +31,35 @@ function genOrderId() {
 }
 
 /* ─── Open Checkout Modal ─── */
-window.openCheckoutModal = async function () {
+window.openCheckoutModal = async function (allowGuest = false) {
   const cart = window.getCart ? window.getCart() : [];
   if (!cart || cart.length === 0) {
     alert('Your cart is empty! Add some items first.');
     return;
   }
 
-  // Auth Gating
-  const db = getSupabase();
+  // Auth Gating using real Supabase client
+  const db = window.rcGetSupabaseClient ? window.rcGetSupabaseClient() : getSupabase();
   let user = null;
   if (db) {
     const { data } = await db.auth.getUser();
     user = data?.user;
   }
 
-  if (!user && window.openLoginModal && db && RC_CONFIG.supabaseUrl !== 'YOUR_SUPABASE_URL') {
+  // If no user, ask to login, unless they already chose guest mode
+  if (!user && window.openLoginModal && db && !allowGuest) {
     window.openLoginModal(() => {
-      window.openCheckoutModal();
+      // Callback after modal closes (either logged in or guest chosen)
+      window.openCheckoutModal(true);
     });
     return;
   }
 
+  // They are either a user, or a confirmed guest
   const isGuest = !user;
   const payBtn = document.getElementById('btn-razorpay');
   if (payBtn) {
-    if (isGuest && db && RC_CONFIG.supabaseUrl !== 'YOUR_SUPABASE_URL') {
+    if (isGuest) {
       payBtn.disabled = true;
       payBtn.style.opacity = '0.5';
       payBtn.innerHTML = `<span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">lock</span> Login to Pay Online`;
@@ -115,6 +118,10 @@ function renderCheckoutSummary(cart) {
 
 /* ─── Save order to Supabase ─── */
 async function saveOrderToSupabase(orderData) {
+  if (window.rcInsertOrder) {
+    return await window.rcInsertOrder(orderData);
+  }
+
   const db = getSupabase();
   if (!db || RC_CONFIG.supabaseUrl === 'YOUR_SUPABASE_URL') {
     // Fallback: save locally + show success anyway (demo mode)
