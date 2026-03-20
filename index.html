@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roasted Cream – The Food Cafe | Desserts, Pizza &amp; Momos in Hyderabad</title>
+  <meta name="description" content="Roasted Cream is Hyderabad's cosiest food cafe serving handcrafted desserts, wood-fired pizzas, steamed momos, shakes &amp; sandwiches in East Marredpally. Visit us today!" />
+  <meta name="keywords" content="best cafe East Marredpally, desserts Hyderabad, pizza Hyderabad, momos Hyderabad, Roasted Cream Hyderabad, food cafe Secunderabad" />
+  <meta name="author" content="Roasted Cream – The Food Cafe" />
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#3c2f2f" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Roasted Cream – The Food Cafe | Hyderabad" />
+  <meta property="og:description" content="Best cafe in East Marredpally, Hyderabad. Handcrafted desserts, wood-fired pizza, momos, shakes &amp; more. Order online or visit us!" />
+  <meta property="og:type" content="restaurant.restaurant" />
+  <meta property="og:image" content="images/hero-bg.jpg" />
+  <meta property="og:url" content="https://roastedcream.in" />
+  <meta property="og:locale" content="en_IN" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Roasted Cream – The Food Cafe" />
+  <meta name="twitter:description" content="Best cafe in East Marredpally. Desserts, Pizza, Momos &amp; more. Order online!" />
+  <meta name="twitter:image" content="images/hero-bg.jpg" />
+  <!-- Geo -->
+  <meta name="geo.region" content="IN-TS" />
+  <meta name="geo.placename" content="East Marredpally, Hyderabad" />
+  <meta name="geo.position" content="17.44;78.50" />
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="GSC_VERIFICATION_PLACEHOLDER" />
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Restaurant", "LocalBusiness"],
+    "name": "Roasted Cream – The Food Cafe",
+    "image": "https://roastedcream.in/images/hero-bg.jpg",
+    "description": "Hyderabad's cosiest food cafe serving handcrafted desserts, wood-fired pizzas, steamed momos, shakes & sandwiches.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ground Floor, Near SBI Bank, East Marredpally",
+      "addressLocality": "Hyderabad",
+      "addressRegion": "Telangana",
+      "postalCode": "500026",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 17.4400,
+      "longitude": 78.5000
+    },
+    "url": "https://roastedcream.in",
+    "telephone": "+919652929252",
+    "servesCuisine": "Cafe, Desserts, Pizza, Momos",
+    "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "ratingCount": "1042"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "23:00"
+      }
+    ],
+    "menu": "https://roastedcream.in/#menu"
+  }
+  </script>
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            surface: '#fff8f1',
+            'surface-container': '#f5ede1',
+            'surface-container-high': '#ede3d7',
+            'surface-container-highest': '#e3d8cb',
+            'primary-container': '#3c2f2f',
+            'on-primary-container': '#f5ede1',
+            secondary: '#99462a',
+            'on-secondary': '#ffffff',
+            'secondary-container': '#ffdad0',
+            'on-secondary-container': '#3c0f00',
+            'tertiary-fixed': '#d3e8ce',
+            'on-tertiary-fixed': '#002109',
+            'tertiary-fixed-dim': '#b7ccb3',
+            outline: '#857468',
+            'outline-variant': '#d6c4b5',
+            error: '#ba1a1a',
+            'on-surface': '#201a17',
+            'on-surface-variant': '#534840',
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            xl: '1rem',
+            '2xl': '1.5rem',
+            '3xl': '2rem',
+          },
+          boxShadow: {
+            ambient: '0 4px 32px 0 rgba(60,47,47,0.08)',
+            'ambient-lg': '0 8px 48px 0 rgba(60,47,47,0.12)',
+          },
+        },
+      },
+    };
+  </script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Razorpay CDN -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+
+<body class="bg-surface font-body text-on-surface antialiased">
+
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-16 md:h-20">
+      <!-- Logo -->
+      <a href="#" class="flex flex-col gap-0.5 group" aria-label="Roasted Cream Home">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-xl bg-secondary flex items-center justify-center shadow-ambient">
+            <span class="material-symbols-outlined text-white text-xl" style="font-variation-settings:'FILL' 1">local_cafe</span>
+          </div>
+          <span class="font-display font-800 text-lg text-primary-container tracking-tight leading-tight">Roasted<br><span class="text-secondary">Cream</span></span>
+        </div>
+        <span class="text-[0.6rem] text-on-surface-variant font-medium uppercase tracking-wider bg-surface-container py-0.5 px-2 rounded-full self-start mt-0.5">FSSAI: 14-DIGIT-NUMBER-PLACEHOLDER</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="hidden md:flex items-center gap-7 font-body font-medium text-sm text-on-surface-variant">
+        <li><a href="#about" class="hover:text-secondary transition-colors">About</a></li>
+        <li><a href="#menu" class="hover:text-secondary transition-colors">Menu</a></li>
+        <li><a href="#why-us" class="hover:text-secondary transition-colors">Why Us</a></li>
+        <li><a href="#reviews" class="hover:text-secondary transition-colors">Reviews</a></li>
+        <li><a href="#location" class="hover:text-secondary transition-colors">Location</a></li>
+      </ul>
+
+      <!-- Desktop CTA -->
+      <div class="hidden md:flex items-center gap-3">
+        <div class="cart-btn-wrap">
+          <button id="cart-btn" data-open-cart aria-label="View cart" class="w-10 h-10 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors">
+            <span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 0">shopping_bag</span>
+          </button>
+          <span id="cart-badge" class="cart-count-badge">0</span>
+        </div>
+        <button onclick="window.openCheckoutModal && window.openCheckoutModal()" class="btn-primary">Order Now</button>
+      </div>
+
+      <!-- Mobile: cart + hamburger -->
+      <div class="flex md:hidden items-center gap-2">
+        <div class="cart-btn-wrap">
+          <button data-open-cart aria-label="View cart" class="w-10 h-10 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors">
+            <span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 0">shopping_bag</span>
+          </button>
+          <span class="cart-count-badge">0</span>
+        </div>
+        <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" class="w-10 h-10 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined" id="hamburger-icon">menu</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu-closed md:hidden bg-surface shadow-ambient-lg">
+      <div class="px-5 pb-6 pt-2 flex flex-col gap-1">
+        <a href="#about" class="nav-link-mobile">About</a>
+        <a href="#menu" class="nav-link-mobile">Menu</a>
+        <a href="#why-us" class="nav-link-mobile">Why Us</a>
+        <a href="#reviews" class="nav-link-mobile">Reviews</a>
+        <a href="#location" class="nav-link-mobile">Location</a>
+        <div class="pt-3 flex flex-col gap-2">
+          <button onclick="window.openCheckoutModal && window.openCheckoutModal()" class="btn-primary w-full text-center">Order Now</button>
+          <a href="https://www.swiggy.com/city/hyderabad/roasted-cream-nehru-nagar-east-marredpally-rest549647?utm_source=GooglePlaceOrder&utm_campaign=GoogleMap&is_retargeting=true&media_source=GooglePlaceOrder" target="_blank" rel="noopener" class="btn-secondary w-full text-center">🛵 Order on Swiggy</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════ HERO ═══════════════════════ -->
+    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
+      <!-- BG Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="images/hero-bg.jpg" alt="Cosy interior of Roasted Cream cafe with warm lighting" class="w-full h-full object-cover" loading="eager" />
+        <div class="hero-overlay absolute inset-0"></div>
+      </div>
+      <!-- Grain overlay -->
+      <div class="grain-overlay absolute inset-0 z-[1] pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 pt-24 pb-16 md:pt-32 md:pb-24 w-full">
+        <div class="max-w-2xl">
+          <!-- Rating badge -->
+          <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 mb-6">
+            <span class="text-amber-400 text-sm">★★★★★</span>
+            <span class="text-white/90 text-sm font-medium">4.5+ · Loved by 10,000+ guests</span>
+          </div>
+          <h1 class="font-display font-800 text-5xl md:text-7xl text-white leading-[1.05] mb-6">
+            Indulge in<br /><span class="text-gradient-warm">Every Moment</span>
+          </h1>
+          <p class="font-body text-white/80 text-lg md:text-xl leading-relaxed mb-10 max-w-lg">
+            From soul-warming desserts and crispy wood-fired pizzas to fluffy steamed momos — every plate at Roasted Cream is a tiny celebration of life.
+          </p>
+          <!-- CTAs -->
+          <div class="flex flex-wrap gap-4 mb-6">
+            <button onclick="window.openCheckoutModal && window.openCheckoutModal()" class="btn-primary-lg">
+              <span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 1">shopping_bag</span>
+              Order Now
+            </button>
+            <a href="#location" class="btn-ghost-lg">
+              <span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 0">location_on</span>
+              Visit Us
+            </a>
+          </div>
+          <!-- Delivery app buttons -->
+          <div class="flex flex-wrap gap-3 mb-6">
+            <a href="https://www.swiggy.com/city/hyderabad/roasted-cream-nehru-nagar-east-marredpally-rest549647?utm_source=GooglePlaceOrder&utm_campaign=GoogleMap&is_retargeting=true&media_source=GooglePlaceOrder" target="_blank" rel="noopener" class="btn-primary-lg" style="background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.3);backdrop-filter:blur(8px)">
+              🛵 Swiggy
+            </a>
+            <a href="https://www.zomato.com/hyderabad/roasted-cream-marredpally-secunderabad/order" target="_blank" rel="noopener" class="btn-primary-lg" style="background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.3);backdrop-filter:blur(8px)">
+              🍽 Zomato
+            </a>
+          </div>
+          <!-- Delivery logos -->
+          <div class="flex items-center gap-5 flex-wrap">
+            <span class="text-white/60 text-xs uppercase tracking-widest font-medium">Free delivery via</span>
+            <a href="https://www.swiggy.com/city/hyderabad/roasted-cream-nehru-nagar-east-marredpally-rest549647?utm_source=GooglePlaceOrder&utm_campaign=GoogleMap&is_retargeting=true&media_source=GooglePlaceOrder" target="_blank" rel="noopener" class="delivery-badge">🛵 Swiggy</a>
+            <a href="https://www.zomato.com/hyderabad/roasted-cream-marredpally-secunderabad/order" target="_blank" rel="noopener" class="delivery-badge">🍽 Zomato</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 text-white/50">
+        <span class="text-xs tracking-widest uppercase">Scroll</span>
+        <span class="material-symbols-outlined animate-bounce text-lg">keyboard_arrow_down</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ TRUST BADGES ═══════════════════════ -->
+    <div class="trust-badges-row">
+      <div class="trust-badge-item">
+        <span class="text-amber-400 text-xl font-bold align-middle mr-1 mt-0.5">★</span> <span class="align-middle">4.5+ Google Rated</span>
+      </div>
+      <div class="trust-badge-item">
+        <span class="text-xl align-middle mr-1 mt-0.5">🛵</span> <span class="align-middle">Swiggy / Zomato Partner</span>
+      </div>
+      <div class="trust-badge-item">
+        <span class="material-symbols-outlined text-green-600 align-middle mr-1" style="font-variation-settings:'FILL' 1; font-size: 1.25rem;">verified_user</span> <span class="align-middle">FSSAI Licensed Kitchen</span>
+      </div>
+      <div class="trust-badge-item">
+        <span class="material-symbols-outlined text-blue-600 align-middle mr-1" style="font-variation-settings:'FILL' 1; font-size: 1.25rem;">lock</span> <span class="align-middle">Razorpay Secure</span>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+    <section id="about" class="py-24 md:py-32 bg-surface">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+          <!-- Image -->
+          <div class="relative order-2 md:order-1">
+            <div class="rounded-3xl overflow-hidden shadow-ambient-lg aspect-[4/5]">
+              <img src="images/interior.jpg" alt="Warm, cozy interior of Roasted Cream cafe in Hyderabad" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <!-- Floating stat card -->
+            <div class="absolute -bottom-5 -right-4 md:-right-8 bg-primary-container rounded-2xl px-6 py-5 shadow-ambient-lg grain-overlay-sm text-on-primary-container">
+              <p class="font-display font-700 text-3xl text-secondary-container text-amber-200">10K+</p>
+              <p class="font-body text-sm text-on-primary-container/80 mt-1">Happy Guests</p>
+            </div>
+          </div>
+          <!-- Text -->
+          <div class="order-1 md:order-2">
+            <span class="section-eyebrow">Our Story</span>
+            <h2 class="section-heading">A Warm Hug in the<br />Form of Food</h2>
+            <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+              Born in the heart of East Marredpally, Roasted Cream started with a single dream: to create a space where every bite feels like home. We believe food is more than sustenance — it's a memory, a feeling, a moment shared.
+            </p>
+            <p class="font-body text-on-surface-variant leading-relaxed mb-8">
+              Our chefs pour passion into every dish — from our signature hand-crafted desserts drizzled in dark chocolate to our crispy-edged pizzas baked with patience. We source fresh, choose local, and cook with love.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <div class="stat-pill"><span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings:'FILL' 1">favorite</span> Made with Love</div>
+              <div class="stat-pill"><span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings:'FILL' 1">eco</span> Fresh Ingredients</div>
+              <div class="stat-pill"><span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings:'FILL' 1">storefront</span> Since 2020</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ MENU ═══════════════════════ -->
+    <section id="menu" class="py-24 md:py-32 bg-surface-container">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="text-center mb-14">
+          <span class="section-eyebrow">Our Specialities</span>
+          <h2 class="section-heading">Signature Bites &amp; Sips</h2>
+          <p class="font-body text-on-surface-variant max-w-xl mx-auto">Every item is crafted to be unforgettable. Choose your craving.</p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="flex flex-wrap justify-center gap-2 mb-10" id="menu-filters">
+          <button class="filter-tab active-tab" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="dessert">Desserts</button>
+          <button class="filter-tab" data-filter="pizza">Pizza</button>
+          <button class="filter-tab" data-filter="momo">Momos</button>
+          <button class="filter-tab" data-filter="drinks">Drinks</button>
+        </div>
+
+        <!-- Menu grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="menu-grid">
+
+          <!-- Card 1: Roasted Cream Dessert -->
+          <div class="menu-card" data-category="dessert">
+            <div class="menu-card-img-wrap">
+              <img src="images/dessert.jpg" alt="Roasted Cream signature dessert with dark chocolate drizzle" loading="lazy" class="menu-card-img" />
+              <span class="menu-badge">🏆 Signature</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="flex justify-between items-start mb-1">
+                <h3 class="font-display font-700 text-lg text-primary-container">Roasted Dream Cream</h3>
+                <span class="menu-price">₹149</span>
+              </div>
+              <p class="text-sm text-on-surface-variant mb-4">Our legendary layered dessert — velvety vanilla cream, dark chocolate ganache, and a caramelised biscuit crunch. Absolute bliss.</p>
+              <button class="btn-add-to-cart" data-item-name="Roasted Dream Cream" data-item-price="149">
+                <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1">add_shopping_cart</span> Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: Pizza -->
+          <div class="menu-card" data-category="pizza">
+            <div class="menu-card-img-wrap">
+              <img src="images/pizza.jpg" alt="Crispy margherita pizza at Roasted Cream cafe" loading="lazy" class="menu-card-img" />
+              <span class="menu-badge bg-red-100 text-red-700">🔥 Bestseller</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="flex justify-between items-start mb-1">
+                <h3 class="font-display font-700 text-lg text-primary-container">Margherita Magic</h3>
+                <span class="menu-price">₹199</span>
+              </div>
+              <p class="text-sm text-on-surface-variant mb-4">Classic thin-crust pizza with tangy tomato sauce, fresh mozzarella &amp; fragrant basil. Crispy edges, gooey centre — perfection.</p>
+              <button class="btn-add-to-cart" data-item-name="Margherita Magic" data-item-price="199">
+                <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1">add_shopping_cart</span> Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Momos -->
+          <div class="menu-card" data-category="momo">
+            <div class="menu-card-img-wrap">
+              <img src="images/momos.jpg" alt="Steamed momos with spicy chutney at Roasted Cream" loading="lazy" class="menu-card-img" />
+            </div>
+            <div class="menu-card-body">
+              <div class="flex justify-between items-start mb-1">
+                <h3 class="font-display font-700 text-lg text-primary-container">Steamed Momo Basket</h3>
+                <span class="menu-price">₹99</span>
+              </div>
+              <p class="text-sm text-on-surface-variant mb-4">Soft-steamed dumplings stuffed with spiced veggies or chicken, served with fiery red chutney. 6 pieces of pure comfort.</p>
+              <button class="btn-add-to-cart" data-item-name="Steamed Momo Basket" data-item-price="99">
+                <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1">add_shopping_cart</span> Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4: Sandwich -->
+          <div class="menu-card" data-category="dessert">
+            <div class="menu-card-img-wrap">
+              <img src="images/sandwich.jpg" alt="Toasted cheese sandwich at Roasted Cream" loading="lazy" class="menu-card-img" />
+            </div>
+            <div class="menu-card-body">
+              <div class="flex justify-between items-start mb-1">
+                <h3 class="font-display font-700 text-lg text-primary-container">Loaded Club Sandwich</h3>
+                <span class="menu-price">₹129</span>
+              </div>
+              <p class="text-sm text-on-surface-variant mb-4">Triple-decker toasted sandwich with fresh veggies, creamy spread, and melted cheese. Filling, flavourful, and fast.</p>
+              <button class="btn-add-to-cart" data-item-name="Loaded Club Sandwich" data-item-price="129">
+                <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1">add_shopping_cart</span> Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 5: Shakes -->
+          <div class="menu-card" data-category="drinks">
+            <div class="menu-card-img-wrap">
+              <img src="images/shake.jpg" alt="Thick milkshake at Roasted Cream Hyderabad" loading="lazy" class="menu-card-img" />
+              <span class="menu-badge bg-purple-100 text-purple-700">🥤 Fan Fav</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="flex justify-between items-start mb-1">
+                <h3 class="font-display font-700 text-lg text-primary-container">Thick Oreo Shake</h3>
+                <span class="menu-price">₹119</span>
+              </div>
+              <p class="text-sm text-on-surface-variant mb-4">Crushed Oreos blended with creamy vanilla ice cream and chilled milk — thick, indulgent, and absolutely addictive.</p>
+              <button class="btn-add-to-cart" data-item-name="Thick Oreo Shake" data-item-price="119">
+                <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1">add_shopping_cart</span> Add
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 6: Waffle -->
+          <div class="menu-card" data-category="dessert">
+            <div class="menu-card-img-wrap">
+              <img src="images/waffle.jpg" alt="Belgian waffle with Nutella at Roasted Cream" loading="lazy" class="menu-card-img" />
+            </div>
+            <div class="menu-card-body">
+              <div class="flex justify-between items-start mb-1">
+                <h3 class="font-display font-700 text-lg text-primary-container">Nutella Waffle Stack</h3>
+                <span class="menu-price">₹159</span>
+              </div>
+              <p class="text-sm text-on-surface-variant mb-4">Golden Belgian waffles stacked with Nutella, fresh bananas, and a scoop of vanilla ice cream. Dessert heaven.</p>
+              <button class="btn-add-to-cart" data-item-name="Nutella Waffle Stack" data-item-price="159">
+                <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1">add_shopping_cart</span> Add
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-10">
+          <a href="#location" class="btn-secondary">View Full Menu <span class="material-symbols-outlined text-base align-middle">arrow_forward</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ WHY US ═══════════════════════ -->
+    <section id="why-us" class="py-24 md:py-32 bg-surface">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="text-center mb-14">
+          <span class="section-eyebrow">The Roasted Cream Promise</span>
+          <h2 class="section-heading">Why Guests Keep Coming Back</h2>
+          <p class="font-body text-on-surface-variant max-w-lg mx-auto">We're not just a cafe. We're your neighbourhood happy place.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-7">
+          <div class="feature-card">
+            <div class="feature-icon"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">chair</span></div>
+            <h3 class="font-display font-700 text-base text-primary-container mb-1">Cozy Ambiance</h3>
+            <p class="text-sm text-on-surface-variant">Warm lights, plush seating &amp; a vibe that makes you stay a little longer.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">sanitizer</span></div>
+            <h3 class="font-display font-700 text-base text-primary-container mb-1">Hygiene First</h3>
+            <p class="text-sm text-on-surface-variant">5-star kitchen hygiene certified. Clean, safe &amp; FSSAI compliant always.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">savings</span></div>
+            <h3 class="font-display font-700 text-base text-primary-container mb-1">Pocket-Friendly</h3>
+            <p class="text-sm text-on-surface-variant">Premium food at prices that won't burn a hole in your pocket. Treat yourself, guilt-free.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">family_restroom</span></div>
+            <h3 class="font-display font-700 text-base text-primary-container mb-1">Family Friendly</h3>
+            <p class="text-sm text-on-surface-variant">A space for all ages — kids love our desserts, parents love the calm ambiance.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">delivery_dining</span></div>
+            <h3 class="font-display font-700 text-base text-primary-container mb-1">Fast Delivery</h3>
+            <p class="text-sm text-on-surface-variant">Order on Swiggy or Zomato and get your favourites delivered hot &amp; fresh.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span></div>
+            <h3 class="font-display font-700 text-base text-primary-container mb-1">4.5★ Rated</h3>
+            <p class="text-sm text-on-surface-variant">Consistently rated 4.5+ stars by thousands of happy foodies across platforms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ REVIEWS ═══════════════════════ -->
+    <section id="reviews" class="py-24 md:py-32 bg-primary-container relative overflow-hidden">
+      <div class="grain-overlay absolute inset-0 pointer-events-none z-0"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
+        <div class="text-center mb-14">
+          <span class="section-eyebrow-light">Guest Love</span>
+          <h2 class="font-display font-800 text-4xl md:text-5xl text-on-primary-container mb-4">Words from Our People</h2>
+          <!-- Stats row -->
+          <div class="flex flex-wrap justify-center gap-8 md:gap-16 mt-8 mb-2">
+            <div class="text-center"><p class="font-display font-800 text-4xl text-amber-300">4.5★</p><p class="text-on-primary-container/60 text-sm">Avg Rating</p></div>
+            <div class="text-center"><p class="font-display font-800 text-4xl text-amber-300">10K+</p><p class="text-on-primary-container/60 text-sm">Happy Guests</p></div>
+            <div class="text-center"><p class="font-display font-800 text-4xl text-amber-300">3+</p><p class="text-on-primary-container/60 text-sm">Outlets</p></div>
+          </div>
+        </div>
+        <!-- Testimonials -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="review-card">
+            <div class="flex gap-1 text-amber-400 mb-3">★★★★★</div>
+            <p class="text-on-primary-container/80 leading-relaxed mb-4">"The Roasted Dream Cream is literally the best dessert I've had in Hyderabad. The layers, the texture, the taste — 10/10 every single time. We come every weekend!"</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center text-on-primary-container font-bold">P</div>
+              <div><p class="font-semibold text-on-primary-container text-sm">Priya S.</p><p class="text-on-primary-container/50 text-xs">East Marredpally</p></div>
+            </div>
+          </div>
+          <div class="review-card md:translate-y-8">
+            <div class="flex gap-1 text-amber-400 mb-3">★★★★★</div>
+            <p class="text-on-primary-container/80 leading-relaxed mb-4">"Came here with my family on a random Tuesday and left with the biggest smiles. The momos are incredible, and the place has such a warm homey vibe. Highly recommend!"</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center text-on-primary-container font-bold">R</div>
+              <div><p class="font-semibold text-on-primary-container text-sm">Rahul M.</p><p class="text-on-primary-container/50 text-xs">Secunderabad</p></div>
+            </div>
+          </div>
+          <div class="review-card md:-translate-y-4">
+            <div class="flex gap-1 text-amber-400 mb-3">★★★★★</div>
+            <p class="text-on-primary-container/80 leading-relaxed mb-4">"Affordable, yummy, and the staff is so welcoming! The Nutella waffle had me emotional 😂 The portions are generous too. This place deserves all the love."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center text-on-primary-container font-bold">A</div>
+              <div><p class="font-semibold text-on-primary-container text-sm">Aarti K.</p><p class="text-on-primary-container/50 text-xs">Tarnaka</p></div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="flex gap-1 text-amber-400 mb-3">★★★★☆</div>
+            <p class="text-on-primary-container/80 leading-relaxed mb-4">"Pizza is crispy and not too oily — exactly how I like it. Tried the club sandwich and the Oreo shake together and it was a stellar combo. Will definitely be back for more!"</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center text-on-primary-container font-bold">V</div>
+              <div><p class="font-semibold text-on-primary-container text-sm">Vikram T.</p><p class="text-on-primary-container/50 text-xs">Malkajgiri</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ LOCATION ═══════════════════════ -->
+    <section id="location" class="py-24 md:py-32 bg-surface-container">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="text-center mb-14">
+          <span class="section-eyebrow">Find Us</span>
+          <h2 class="section-heading">Come Say Hello</h2>
+          <p class="font-body text-on-surface-variant max-w-lg mx-auto mb-8">We'd love to see you in person. Find us at our flagship cafe or order from the comfort of home.</p>
+          
+          <!-- Dynamic Outlet Tabs -->
+          <div class="outlet-tabs-wrap max-w-2xl mx-auto" id="outlet-tabs" role="tablist">
+            <!-- Rendered by legal.js -->
+          </div>
+        </div>
+        <div class="max-w-4xl mx-auto" id="outlet-detail">
+          <!-- Rendered by legal.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="bg-primary-container text-on-primary-container py-16 relative overflow-hidden">
+    <div class="grain-overlay absolute inset-0 pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+        <!-- Brand -->
+        <div class="col-span-2 md:col-span-1">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-9 h-9 rounded-xl bg-secondary flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-xl" style="font-variation-settings:'FILL' 1">local_cafe</span>
+            </div>
+            <span class="font-display font-800 text-lg text-on-primary-container">Roasted<br><span class="text-amber-200">Cream</span></span>
+          </div>
+          <p class="text-on-primary-container/60 text-sm leading-relaxed mb-5">A warm little cafe in East Marredpally, Hyderabad — serving joy one plate at a time since 2020.</p>
+          <div class="flex gap-3">
+            <a href="https://www.instagram.com/roastedcream_hyd" target="_blank" rel="noopener" aria-label="Follow on Instagram" class="social-icon">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://wa.me/919652929252" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" class="social-icon">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="https://www.swiggy.com/city/hyderabad/roasted-cream-nehru-nagar-east-marredpally-rest549647?utm_source=GooglePlaceOrder&utm_campaign=GoogleMap&is_retargeting=true&media_source=GooglePlaceOrder" target="_blank" rel="noopener" aria-label="Order on Swiggy" class="social-icon text-xs font-bold">🛵</a>
+            <a href="https://www.zomato.com/hyderabad/roasted-cream-marredpally-secunderabad/order" target="_blank" rel="noopener" aria-label="Order on Zomato" class="social-icon text-xs font-bold">🍽</a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#location">Location</a></li>
+          </ul>
+        </div>
+        <!-- Menu -->
+        <div>
+          <h4 class="footer-heading">Our Menu</h4>
+          <ul class="footer-links">
+            <li><a href="#menu">Desserts</a></li>
+            <li><a href="#menu">Pizzas</a></li>
+            <li><a href="#menu">Momos</a></li>
+            <li><a href="#menu">Sandwiches</a></li>
+            <li><a href="#menu">Shakes &amp; Drinks</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+919652929252">+91 96529 29252</a></li>
+            <li><a href="https://wa.me/919652929252" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/roastedcream_hyd" target="_blank" rel="noopener">@roastedcream_hyd</a></li>
+            <li><a href="https://maps.app.goo.gl/sXCRsbH22yW2jnoCA" target="_blank" rel="noopener">Get Directions</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+
+      <!-- Newsletter & Legal section -->
+      <div class="grid md:grid-cols-2 gap-10 py-10 border-t border-on-primary-container/10">
+        <!-- Newsletter -->
+        <div>
+          <h4 class="font-display font-700 text-lg text-on-primary-container mb-2">Join 10k+ happy guests</h4>
+          <p class="text-on-primary-container/60 text-sm mb-4">Get secret menu drops and monthly dessert offers directly to your inbox.</p>
+          <form id="newsletter-form" class="newsletter-group">
+            <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Enter your email" required />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+        <!-- Legal & Reservation -->
+        <div class="md:text-right">
+          <h4 class="font-display font-700 text-lg text-on-primary-container mb-4">Table Reservations</h4>
+          <button onclick="window.openReservationModal && window.openReservationModal()" class="btn-primary inline-flex items-center gap-2 bg-on-primary-container text-primary-container hover:bg-surface-container mb-6">
+            <span class="material-symbols-outlined text-base">event_seat</span> Book a Table
+          </button>
+          <div class="text-on-primary-container/60 text-sm space-y-1">
+            <p><strong>FSSAI Licence:</strong> <span class="font-mono">14-DIGIT-NUMBER-PLACEHOLDER</span></p>
+            <p><strong>GSTIN:</strong> <span class="font-mono">36XXXXXXXXXXXXZ</span></p>
+            <p class="mt-3">All food prepared in FSSAI-licensed premises.<br>Prices inclusive of taxes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-on-primary-container/10 pt-8 flex flex-col md:flex-row justify-between gap-4 text-on-primary-container/40 text-xs">
+        <p>© 2026 Roasted Cream – The Food Cafe. All rights reserved.</p>
+        <div class="flex flex-wrap gap-4 text-sm font-medium">
+          <a href="privacy.html" class="hover:text-on-primary-container underline underline-offset-2">Privacy Policy</a>
+          <a href="terms.html" class="hover:text-on-primary-container underline underline-offset-2">Terms of Service</a>
+          <a href="terms.html" class="hover:text-on-primary-container underline underline-offset-2">Refund Policy</a>
+        </div>
+        <p>Made with ❤️ in Hyderabad</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════ CART DRAWER ═══════════════════════ -->
+  <div id="cart-overlay" class="overlay-base hidden" role="dialog" aria-modal="true" aria-label="Shopping Cart">
+    <div id="cart-drawer">
+      <div class="cart-drawer-header">
+        <span class="cart-drawer-title">🛒 Your Order</span>
+        <button id="cart-drawer-close" class="cart-close-btn" aria-label="Close cart">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </div>
+      <div class="cart-body">
+        <div id="cart-empty" style="display:flex;">
+          <span class="material-symbols-outlined text-5xl text-outline" style="font-variation-settings:'FILL' 0">shopping_bag</span>
+          <p class="font-display font-700 text-primary-container">Your cart is empty</p>
+          <p class="text-sm text-on-surface-variant">Add something from our menu to get started!</p>
+        </div>
+        <div id="cart-items-list"></div>
+      </div>
+      <div id="cart-footer" class="cart-footer" style="display:none;">
+        <div class="cart-subtotal-row">
+          <span class="cart-subtotal-label">Subtotal</span>
+          <span class="cart-subtotal-value" id="cart-subtotal">₹0</span>
+        </div>
+        <button id="cart-checkout-btn" class="btn-primary" style="width:100%;justify-content:center;padding:0.9rem;font-size:1rem;">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">receipt_long</span>
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ CHECKOUT MODAL ═══════════════════════ -->
+  <div id="checkout-modal" class="hidden" role="dialog" aria-modal="true" aria-label="Checkout">
+    <div id="checkout-modal-inner">
+      <div class="modal-header">
+        <span class="modal-title">Complete Your Order</span>
+        <button id="checkout-modal-close" class="modal-close-btn" aria-label="Close checkout">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Order Summary -->
+        <div class="checkout-summary-box">
+          <p class="checkout-summary-box-title">Order Summary</p>
+          <div id="checkout-order-summary"></div>
+        </div>
+        <!-- Customer Form -->
+        <form id="checkout-form" novalidate onsubmit="return false;">
+          <div class="form-group">
+            <label class="form-label" for="co-name">Your Name</label>
+            <input class="form-input" id="co-name" type="text" placeholder="e.g. Priya Sharma" autocomplete="name" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="co-phone">Phone Number</label>
+            <input class="form-input" id="co-phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="co-address">Delivery Address</label>
+            <textarea class="form-input" id="co-address" rows="2" placeholder="House / flat no., street, East Marredpally..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="co-notes">Special Instructions (optional)</label>
+            <input class="form-input" id="co-notes" type="text" placeholder="Extra spicy, no onion, etc." />
+          </div>
+        </form>
+        <!-- Delivery Checker -->
+        <div style="margin-bottom:1.5rem; border-top:1px solid var(--surface-container); padding-top:1.5rem;">
+          <label class="form-label" for="pincode-input">Check Delivery Area</label>
+          <div class="pincode-wrap">
+            <input class="form-input" id="pincode-input" type="text" placeholder="Enter 6-digit pincode" maxlength="6" style="margin-bottom:0;" />
+            <button class="pincode-btn" onclick="window.checkPincode()">Check</button>
+          </div>
+          <div id="pincode-result" class="pincode-result mt-1 text-on-surface-variant">We deliver to select Hyderabad pincodes.</div>
+        </div>
+        <!-- Payment -->
+        <div>
+          <p class="payment-section-title">Choose Payment</p>
+          <div class="payment-btns">
+            <button id="btn-razorpay" class="btn-payment">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">credit_card</span>
+              Pay Online (Card / UPI / Wallet)
+            </button>
+            <button id="btn-whatsapp-order" class="btn-payment">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Order via WhatsApp + Pay on Delivery
+            </button>
+            <button id="btn-cod" class="btn-payment">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">payments</span>
+              Cash on Delivery
+            </button>
+          </div>
+          <!-- UPI QR Code Modal Toggle / Box -->
+          <div class="mt-4 text-center">
+             <button id="btn-show-qr" class="text-sm font-bold text-secondary underline" onclick="document.getElementById('upi-qr-box').classList.toggle('hidden')">Show UPI QR Code for quick payment</button>
+          </div>
+          <div class="upi-qr-box hidden" id="upi-qr-box">
+            <p class="text-sm font-bold text-primary-container mb-2">Scan to Pay via UPI</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=upi://pay?pa=merchant@upi&pn=RoastedCream&cu=INR" alt="Roasted Cream UPI QR Code" />
+            <p class="text-xs text-on-surface-variant mt-2 font-medium">Roasted Cream – Merchant</p>
+            <p class="text-xs text-on-surface-variant mt-1">If paying via QR, please send screenshot on WhatsApp after booking via CoD.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ SUCCESS MODAL ═══════════════════════ -->
+  <div id="success-modal" class="hidden" role="dialog" aria-modal="true" aria-label="Order placed">
+    <div class="success-modal-inner">
+      <div class="success-icon">🎉</div>
+      <p class="success-title">Order Placed!</p>
+      <p class="success-subtitle">Thank you, <span id="success-name">friend</span>! ❤️<br>We'll call you within 5 minutes to confirm your order.</p>
+      <p class="success-order-id">Order ID: <span id="success-order-id">RC00000</span></p>
+      <button id="success-modal-close" class="btn-primary" style="width:100%;justify-content:center;padding:0.9rem;">
+        <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">thumb_up</span>
+        Awesome, thanks!
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ FLOATING BUTTONS ═══════════════════════ -->
+  <div class="fixed bottom-6 right-5 z-50 flex flex-col gap-3 items-end">
+    <!-- WhatsApp -->
+    <a id="whatsapp-fab" href="https://wa.me/919652929252?text=Hi%2C%20I%20want%20to%20order%20from%20Roasted%20Cream%20website!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+       class="floating-fab bg-green-500 hover:bg-green-600 text-white">
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+    <!-- Cart FAB -->
+    <div class="cart-btn-wrap">
+      <button data-open-cart aria-label="Open cart"
+         class="floating-fab bg-secondary hover:bg-on-secondary-container text-white" style="background:var(--secondary)">
+        <span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 1">shopping_bag</span>
+      </button>
+      <span class="cart-count-badge">0</span>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/legal.js"></script>
+
+  <!-- ═══════════════════════ RESERVATION MODAL ═══════════════════════ -->
+  <div id="reservation-modal" class="hidden fixed inset-0 z-[100] items-center justify-center transition-opacity duration-300 opacity-0 pointer-events-none" style="background: rgba(60, 47, 47, 0.4); backdrop-filter: blur(4px);" role="dialog" aria-modal="true" aria-label="Book a Table">
+    <div id="reservation-modal-inner" class="bg-surface rounded-3xl w-full max-w-md mx-4 p-6 shadow-ambient-lg relative max-h-[90vh] overflow-y-auto transform translate-y-8 transition-transform duration-300 pointer-events-auto">
+      <div class="modal-header pb-4 mb-4 border-b border-surface-container">
+        <span class="font-display font-800 text-xl text-primary-container">Book a Table</span>
+        <button id="reservation-modal-close" class="modal-close-btn bg-surface-container hover:bg-surface-container-high w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant transition-colors" aria-label="Close reservation">
+          <span class="material-symbols-outlined text-lg">close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="text-sm text-on-surface-variant mb-6 font-medium">Secure your spot at Roasted Cream. We'll confirm your reservation via WhatsApp.</p>
+        <form id="reservation-form" novalidate onsubmit="return false;" class="space-y-4">
+          <div class="form-group mb-0">
+            <label class="form-label font-bold text-xs uppercase tracking-wider text-on-surface-variant mb-1" for="res-outlet">Select Outlet</label>
+            <select class="form-input w-full bg-white border border-outline-variant rounded-xl p-3 font-body text-sm outline-none focus:border-secondary transition-colors" id="res-outlet">
+              <option value="East Marredpally">East Marredpally (Flagship)</option>
+              <option value="Malkajgiri">Malkajgiri</option>
+              <option value="Tarnaka">Tarnaka</option>
+              <option value="Uppal">Uppal</option>
+            </select>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="form-group mb-0">
+              <label class="form-label font-bold text-xs uppercase tracking-wider text-on-surface-variant mb-1" for="res-date">Date</label>
+              <input class="form-input w-full" id="res-date" type="date" required />
+            </div>
+            <div class="form-group mb-0">
+              <label class="form-label font-bold text-xs uppercase tracking-wider text-on-surface-variant mb-1" for="res-time">Time</label>
+              <input class="form-input w-full" id="res-time" type="time" required />
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="form-group mb-0">
+              <label class="form-label font-bold text-xs uppercase tracking-wider text-on-surface-variant mb-1" for="res-guests">Guests</label>
+              <input class="form-input w-full" id="res-guests" type="number" min="1" max="20" placeholder="2" required />
+            </div>
+            <div class="form-group mb-0">
+              <label class="form-label font-bold text-xs uppercase tracking-wider text-on-surface-variant mb-1" for="res-phone">WhatsApp No.</label>
+              <input class="form-input w-full" id="res-phone" type="tel" placeholder="9876543210" required />
+            </div>
+          </div>
+          <div class="form-group mb-6">
+            <label class="form-label font-bold text-xs uppercase tracking-wider text-on-surface-variant mb-1" for="res-name">Your Name</label>
+            <input class="form-input w-full" id="res-name" type="text" placeholder="e.g. Priya Sharma" required />
+          </div>
+          <button id="res-submit" class="btn-primary w-full justify-center text-center py-4 text-base shadow-ambient">
+            <span class="material-symbols-outlined mr-2" style="font-variation-settings:'FILL' 1">send</span>
+            Request Booking
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Inline style for overlay visible state to avoid CSS file cache issues if any -->
+  <style>
+    #reservation-modal.overlay-visible { opacity: 1 !important; pointer-events: auto !important; }
+    #reservation-modal.overlay-visible #reservation-modal-inner { transform: translateY(0) !important; }
+  </style>
+  <!-- Service Worker registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.info('[RC] SW registered:', reg.scope))
+          .catch(err => console.warn('[RC] SW registration failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /task.md
+Disallow: /DESIGN.md
+
+Sitemap: https://roastedcream.in/sitemap.xml

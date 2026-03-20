@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roasted Cream – The Food Cafe | Premium Comfort Dining</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#d3e8ce",
+              "tertiary-container": "#253624",
+              "on-secondary-fixed": "#390b00",
+              "inverse-primary": "#d6c2c1",
+              "on-primary-fixed": "#241919",
+              "primary-container": "#3c2f2f",
+              "surface-container-low": "#fbf3e6",
+              "error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#b8ccb3",
+              "inverse-surface": "#343028",
+              "surface-container-high": "#efe7db",
+              "on-secondary-fixed-variant": "#7a2f15",
+              "surface-container-highest": "#e9e1d6",
+              "surface-dim": "#e1d9cd",
+              "on-primary": "#ffffff",
+              "on-secondary-container": "#762c12",
+              "on-surface": "#1e1b14",
+              "outline-variant": "#d2c3c3",
+              "surface-container": "#f5ede1",
+              "secondary": "#99462a",
+              "on-primary-fixed-variant": "#524343",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#fff8f1",
+              "surface-container-lowest": "#ffffff",
+              "surface-variant": "#e9e1d6",
+              "surface": "#fff8f1",
+              "primary-fixed": "#f3dedd",
+              "on-error": "#ffffff",
+              "tertiary": "#102110",
+              "secondary-fixed-dim": "#ffb59e",
+              "outline": "#807474",
+              "on-surface-variant": "#4e4444",
+              "primary-fixed-dim": "#d6c2c1",
+              "on-primary-container": "#a99696",
+              "on-background": "#1e1b14",
+              "primary": "#261a1a",
+              "surface-tint": "#6a5b5b",
+              "error": "#ba1a1a",
+              "on-tertiary": "#ffffff",
+              "background": "#fff8f1",
+              "inverse-on-surface": "#f8f0e4",
+              "on-tertiary-container": "#8b9f87",
+              "on-tertiary-fixed": "#0f1f0f",
+              "secondary-container": "#fe9572",
+              "on-tertiary-fixed-variant": "#394b38",
+              "secondary-fixed": "#ffdbd0"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>.grain-overlay {
+    position: relative
+    }
+.grain-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCrLBQfk9l0-lVa5oVEk7u5ajLStqc3NHhD89JA0qYnoWoxrfLUcQhfMD6giuYZNLW7cJmFh8i9e9iN4qem7uLseLRpI2KnRQ3Jrc0mwNMre-YCqIilJd4a9sRk9l2OtNoUaPrwL3WoX4f-8VLuj1E-OJd2EFUcUpVshzaUV90zIKU_XyT6RUq0LOjHrqjLwZ-HQcAr6ol8NZdzOPTW36RKhqxoGNSZyjuMx4UPrJi3zOaIct1z7hMdLOA13U0xjc6bUIl26z7a0OEz);
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 1
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }</style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff8f1]/80 dark:bg-[#261a1a]/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<a class="text-2xl font-black text-[#3c2f2f] dark:text-[#f5ede1] uppercase italic font-headline tracking-tight" href="#">
+                Roasted Cream
+            </a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#99462a] dark:text-[#99462a] border-b-2 border-[#99462a] pb-1 font-headline font-bold tracking-tight" href="#about">About</a>
+<a class="text-[#3c2f2f] dark:text-[#e9e1d6] hover:text-[#99462a] transition-colors font-headline font-bold tracking-tight hover:scale-105 duration-300" href="#menu">Menu</a>
+<a class="text-[#3c2f2f] dark:text-[#e9e1d6] hover:text-[#99462a] transition-colors font-headline font-bold tracking-tight hover:scale-105 duration-300" href="#why-us">Why Us</a>
+<a class="text-[#3c2f2f] dark:text-[#e9e1d6] hover:text-[#99462a] transition-colors font-headline font-bold tracking-tight hover:scale-105 duration-300" href="#reviews">Reviews</a>
+<a class="text-[#3c2f2f] dark:text-[#e9e1d6] hover:text-[#99462a] transition-colors font-headline font-bold tracking-tight hover:scale-105 duration-300" href="#location">Location</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#3c2f2f] dark:text-[#f5ede1] cursor-pointer" data-icon="shopping_bag">shopping_bag</span>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold hover:scale-105 transition-transform duration-300 active:scale-95">
+                    Order Now
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-primary-container grain-overlay">
+<div class="absolute inset-0 z-0">
+<img alt="Warm cafe interior with soft lighting and cozy seating" class="w-full h-full object-cover opacity-40 mix-blend-overlay" data-alt="Warm cafe interior with soft lighting and cozy seating" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3zIrwbtRvMvBPmK3HKW0WA_UzXUGoY--cDQ1VPDH9aOTpLCFCQiHpSMmvVw6bJ2Pcidgw2AHme15qwiSoEawx54aSevePnUDtp4HayT6VtuQKfoPsRZrElwHutV_CQ_pSdB5l8mhLRix1wXL-kNRq_CyUb_PYa0isUydtzCr7AtYno9equwZGQZewv7zpuMaWqJsXkByw1__4OLOQiloKDGCmLN7f1OuZlt43doW4_42XPRkwz9lKlytO2WhLgFY-XQG_0sz1pIBf"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 bg-secondary/20 border border-secondary/30 px-4 py-2 rounded-full text-secondary font-bold text-sm tracking-wider uppercase">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                    4.5+ Rated Neighborhood Favorite
+                </div>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold text-on-primary leading-tight tracking-tighter">
+                    Indulge in Every <span class="text-secondary-container italic">Moment</span>
+</h1>
+<p class="text-xl text-on-primary-container max-w-lg leading-relaxed font-body">
+                    Cozy vibes • Irresistible desserts, pizzas &amp; more • Your neighborhood comfort cafe in East Marredpally.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform active:scale-95 shadow-xl shadow-secondary/20">
+                        Order Now for Delivery
+                    </button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all flex items-center gap-2">
+                        Visit Us <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="flex items-center gap-8 pt-6 opacity-80">
+<div class="flex flex-col gap-1">
+<span class="text-xs text-on-primary-container uppercase tracking-widest font-bold">Delivery Partners</span>
+<div class="flex gap-4 items-center grayscale invert brightness-0">
+<img alt="Swiggy" class="h-6" data-alt="Swiggy delivery logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO38arLM2pSAqdDCja8mkUE7Y2XraYIIcizTUg1YLlAfRoYzKN5deXSOM_WNCvAHBiTvmFE_ZM_TQ58Elb9AyPjVp-gkdpx09LpXzvQI7-OI_6enNZVoPnMbKR1Pqu9dGqmPo5GyT-hQv-jKMdhPSYPpJcaCfuzlnVQtZAo7reLbM7G0jj6wxSOwSH6hb9M8mP49J1I1P0RJQ384wdimdbcVG1H5BFC5w-7k__CDA7XJw7WRepppE176LAlHwup42qf4hu3bmHA1KD"/>
+<img alt="Zomato" class="h-6" data-alt="Zomato delivery logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMd-66fYQpbEX5KWo97-hpElR54_4MW_FsocJ1b-XGf_g889ZjFUO0qWcGWJZg8aRT-nCSEzOMOUWGDDzU3Qs5T9NskEA7KlknnG0NP7lR6NMGCcp98rz1gLt8Y_G3jkYZdfftLaRuHr9hYw7rEBqHua_yi7i0w6ib1og6dozg38hxvOBScBmIdttXbyYow2o6si2aOOw55uq-BQQQ6E-4EaTTMC0Ya238I9QQdN1aD4oLNsudldHm_f8VU_TDL2Cn2wwxjeX9tlyN"/>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden lg:block relative">
+<div class="relative z-20 transform translate-x-12 translate-y-12">
+<img alt="Signature cheesy pizza on a wooden board" class="rounded-3xl shadow-2xl border-4 border-white/10 w-full h-[600px] object-cover" data-alt="Signature cheesy pizza on a wooden board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbfniwgGVXZgEJyireVlxxtz2aooba-L5A5IbUvzCroynE9YFTLENHD67u6E9NGbQorHZVNldW4WeS_gGiWsRKG3vyObNY2gGaC-yA7PcelfY8Ik_BwmpxvdYu2HuA8ORWsUV0YUHUm-G0fpgLxrv25Q1lUsnldtc9A7w1tIMmXGdyzqAe9uSLMIanv7U6Hy5FikOIaaumDP7rL9D0XpEdbKhZCy4-CoEpltKMAcWP643NqdkDaZIpj2lyZesQSJchN6emdeeuV1bZ"/>
+</div>
+<div class="absolute top-0 right-0 z-10 -translate-y-12 bg-tertiary-fixed p-8 rounded-3xl shadow-xl w-64">
+<span class="material-symbols-outlined text-4xl text-on-tertiary-fixed mb-4" data-icon="ice_cream">icecream</span>
+<h3 class="font-headline font-bold text-on-tertiary-fixed text-xl">Roasted Cream Special</h3>
+<p class="text-on-tertiary-fixed-variant text-sm mt-2">Our handcrafted desserts are made with farm-fresh cream and love.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-surface px-8" id="about">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="aspect-square bg-surface-container rounded-full absolute -top-10 -left-10 w-64 h-64 -z-10"></div>
+<img alt="Barista preparing fresh coffee" class="rounded-xl w-full h-[500px] object-cover shadow-sm" data-alt="Barista preparing fresh coffee" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVyA2l8r4xl7UtEcQVWdiBXIrITbNAdP4vsz2xUVJNqd540poUws9XBqnzqzgSzhlB13zQk5Dcs8BJRftu7ejtZBn1Yp3W0FAgW_VZfj6b5FmQWSlSblOeimNS4X8OGyqZeBeVyIQmNKHD5T7JpQwSEnxNjtCj4W_KmhWbs6o30Nmv3wNa4hbxipZfCSQpOM3onMMpn8eIOis-vaXQX-XuSV1mlx_k9O3Mm1FTx46y1wbJwkfNnNbLdclSx_NIGlxZtlR51Xu18BDT"/>
+<div class="absolute bottom-8 -right-8 bg-primary-container text-white p-6 rounded-xl max-w-xs shadow-2xl">
+<p class="font-headline font-bold italic">"Food crafted with love, hygiene, and the perfect balance of taste."</p>
+</div>
+</div>
+<div class="space-y-6">
+<span class="text-secondary font-bold tracking-widest uppercase text-sm">Our Story</span>
+<h2 class="text-5xl font-headline font-extrabold text-primary leading-tight">Warm Hugs in the <br/>Form of Food.</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed font-body">
+                    Roasted Cream – The Food Cafe is your go-to spot for comfort. From our signature roasted cream desserts to cheesy pizzas and flavorful momos, every dish is crafted with love, hygiene, and the perfect balance of taste and affordability.
+                </p>
+<p class="text-lg text-on-surface-variant leading-relaxed font-body">
+                    Come alone, come with family — just come with an appetite for good times in a space that feels like home.
+                </p>
+<div class="pt-4">
+<div class="grid grid-cols-2 gap-8">
+<div>
+<span class="block text-3xl font-headline font-extrabold text-secondary">100%</span>
+<span class="text-sm font-bold uppercase tracking-wide text-on-surface-variant">Fresh Ingredients</span>
+</div>
+<div>
+<span class="block text-3xl font-headline font-extrabold text-secondary">4.5+</span>
+<span class="text-sm font-bold uppercase tracking-wide text-on-surface-variant">Google Rating</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Menu Section - Asymmetric Grid -->
+<section class="py-24 bg-surface-container-low grain-overlay" id="menu">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="space-y-4">
+<span class="text-secondary font-bold tracking-widest uppercase text-sm">The Palette</span>
+<h2 class="text-5xl font-headline font-extrabold text-primary">Signature Flavors</h2>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-container-highest px-6 py-2 rounded-full font-bold hover:bg-secondary hover:text-white transition-all">All</button>
+<button class="bg-surface-container-highest px-6 py-2 rounded-full font-bold hover:bg-secondary hover:text-white transition-all">Pizzas</button>
+<button class="bg-surface-container-highest px-6 py-2 rounded-full font-bold hover:bg-secondary hover:text-white transition-all">Desserts</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Item -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-white shadow-sm transition-all hover:shadow-xl">
+<img alt="Gourmet Pizza" class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Gourmet cheesy pizza with fresh basil and tomatoes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbLymh96BMd0T0P_zcNBYnQK2tnYhTktVtPBBbXu5gThMZkZfi7py_lidGZtkW4zOACPMMUiFaTdNA3cH69RjdPp-yAv-q_aPB174uFtWL4My-IZvzBlUOdl2Ec4kB2y2XNnpxr_2w1f3WTe7UZ1txEKM5Zz0XBJjVSMGShjQkp5ovZvcyOgXM4U-qZYH5d4WakZXCrmCaf6xQWT1XOuunLXGBZB3MBX0lMUxbDvx2cDS8JynmIeR4XFCkO60lR8e2qP6eFkLP4raq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex flex-col justify-end p-8">
+<div class="flex justify-between items-end">
+<div>
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded text-xs font-bold uppercase mb-2 inline-block">Bestseller</span>
+<h3 class="text-3xl font-headline font-bold text-white">Classic Italian Fusion Pizza</h3>
+<p class="text-white/80 max-w-sm mt-2">Extra cheese, garden fresh veggies, and our secret roasted herb sauce.</p>
+</div>
+<span class="text-3xl font-headline font-bold text-secondary-container">₹249+</span>
+</div>
+</div>
+</div>
+<!-- Small Item -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-white shadow-sm transition-all hover:shadow-xl">
+<img alt="Roasted Cream Dessert" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Creamy artisanal dessert with caramel drizzle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfk-m61khoXS0iG7VDhdAUpf5IbOvpeCR1qm7E4IfInK7CK8D9H8OcYt9hqYjUIo57RV-R3KBrzkEbRG6YE7ZxJO7YTZ5rsFEW9uKxL_e3gifZVo9VkxZTjeyu3I2LvZUcRcq6Xm5yNFKlcWxVnhDDiQfRLrwcy4Dir44xfehm4bIkbfqsGNT72fV_P-iGvjAfkOyTBqcRzhmWzbFppshyyJVEIQL3uCGaMCGosshFoVSRDfqxsHZCy0VaRzwzl6PGQkA1A_9lbxMq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex flex-col justify-end p-8">
+<h3 class="text-2xl font-headline font-bold text-white">Signature Roasted Cream</h3>
+<p class="text-white/80 text-sm mt-2">Cold, creamy, and irresistibly smooth.</p>
+<span class="text-xl font-headline font-bold text-secondary-container mt-2">₹149</span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="md:col-span-4 group bg-surface-container-highest p-8 rounded-xl hover:bg-secondary transition-all flex flex-col justify-between min-h-[300px]">
+<div>
+<span class="material-symbols-outlined text-4xl mb-6 group-hover:text-white" data-icon="restaurant">restaurant</span>
+<h3 class="text-2xl font-headline font-bold group-hover:text-white">Steamed &amp; Fried Momos</h3>
+<p class="mt-4 group-hover:text-white/80">Juicy fillings wrapped in thin, delicate dough served with spicy dip.</p>
+</div>
+<span class="text-xl font-headline font-bold group-hover:text-white">Starts at ₹99</span>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-white shadow-sm transition-all hover:shadow-xl">
+<img alt="Grilled Sandwich" class="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Crispy grilled sandwich with melting cheese" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk7IEsyQfewpZVvrnHjQJ8-L5QhtnV4PalfvwOyH7AXPiStBonpMjqnJtfrMsBiI7BQcccG3oBQZeJ6bx5ENg8LAI3u5I3kMQhTQN7kf2WTlRm-_biRJUg6i7sdKuyIVgImJ-yUso5iKT_OSzUmtuMrLf6UxhieDVckHr9OpyRA3PsKiaT4bR7Uw8HwzrSWcFnPK-BdkdnQK9qpFqy0h3BdZqdB46GCUEnSk92d0KFhp8ts1AZKBkRjd9fgEIw9siUHoOh8yQeBvWW"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex flex-col justify-end p-8">
+<h3 class="text-xl font-headline font-bold text-white">Grilled Club Sandwich</h3>
+<span class="text-lg font-headline font-bold text-secondary-container mt-1">₹129</span>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-white shadow-sm transition-all hover:shadow-xl">
+<img alt="Iced Beverage" class="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Refreshing iced coffee beverage with cream" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6q34BRQ3euGvdLwP3WSblInSeKrCkdavEhojos1978KmnN1YovSWXPLjmRNY8rt96JvtDS_fiSaycCU6yOtg-ko78li3LThZ3tq5YLxw9N4H1mxeytJHr1sc9veGIbDxPrRvPAx4IZzj57VqhXA_8xuc4lek_1OyLyoAWH6jKkNSgVOruLx4xMZ9WIs2v7NrY8Wn_9w9GfNwABAYt-j2IZcerMo2wsT3Jq3hvE1zL0JEXGY00oh7tTlpn_vX7gDOqEmDd-KA1K3Lb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex flex-col justify-end p-8">
+<h3 class="text-xl font-headline font-bold text-white">Artisanal Shakes</h3>
+<span class="text-lg font-headline font-bold text-secondary-container mt-1">₹119</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us Section -->
+<section class="py-24 bg-surface px-8" id="why-us">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
+<span class="text-secondary font-bold tracking-widest uppercase text-sm">The Experience</span>
+<h2 class="text-5xl font-headline font-extrabold text-primary">Crafted with Intention</h2>
+<p class="text-on-surface-variant">We don't just serve food; we serve experiences that linger in your memory.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Benefit Card 1 -->
+<div class="space-y-6">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl" data-icon="deck">deck</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-primary">Cozy &amp; Beautiful Ambiance</h3>
+<p class="text-on-surface-variant leading-relaxed">Thoughtfully designed interiors with warm lighting, perfect for your Instagram stories and quiet conversations.</p>
+</div>
+<!-- Benefit Card 2 -->
+<div class="space-y-6">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl" data-icon="clean_hands">clean_hands</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-primary">Hygienic &amp; Freshly Prepared</h3>
+<p class="text-on-surface-variant leading-relaxed">Your health is our priority. We maintain strict hygiene standards with open-kitchen practices for every order.</p>
+</div>
+<!-- Benefit Card 3 -->
+<div class="space-y-6">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl" data-icon="payments">payments</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-primary">Pocket-Friendly Prices</h3>
+<p class="text-on-surface-variant leading-relaxed">Premium quality doesn't have to break the bank. We offer artisanal food at prices that families and students love.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-24 bg-primary-container text-white overflow-hidden grain-overlay" id="reviews">
+<div class="max-w-7xl mx-auto px-8 relative">
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="md:w-1/3 space-y-6">
+<div class="flex items-center gap-1 text-secondary-container">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h2 class="text-5xl font-headline font-extrabold leading-tight">Loved by Families &amp; Friends</h2>
+<p class="text-on-primary-container text-lg">Join the thousands of happy guests who make Roasted Cream their neighborhood favorite.</p>
+<div class="flex gap-4 items-center">
+<div class="px-4 py-2 bg-white/10 rounded-lg backdrop-blur-md">
+<span class="font-bold block text-xl">4.5+</span>
+<span class="text-xs uppercase tracking-widest opacity-60 font-bold">Google Stars</span>
+</div>
+<div class="px-4 py-2 bg-white/10 rounded-lg backdrop-blur-md">
+<span class="font-bold block text-xl">10k+</span>
+<span class="text-xs uppercase tracking-widest opacity-60 font-bold">Happy Guests</span>
+</div>
+</div>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white p-8 rounded-3xl text-on-surface">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="format_quote">format_quote</span>
+<p class="italic text-lg mb-6">"The Roasted Cream dessert is a game-changer! Best place in East Marredpally for quick bites and desserts."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container"></div>
+<div>
+<h4 class="font-bold">Rahul Sharma</h4>
+<span class="text-xs text-on-surface-variant uppercase font-bold tracking-tighter">Local Guide</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest p-8 rounded-3xl text-on-surface transform md:translate-y-12">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="format_quote">format_quote</span>
+<p class="italic text-lg mb-6">"Perfect for family dinners. The pizzas are cheesy and fresh, and the ambiance is so welcoming."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container"></div>
+<div>
+<h4 class="font-bold">Priya Reddy</h4>
+<span class="text-xs text-on-surface-variant uppercase font-bold tracking-tighter">Food Blogger</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Us (Location) Section -->
+<section class="py-24 bg-surface px-8" id="location">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div class="space-y-8">
+<span class="text-secondary font-bold tracking-widest uppercase text-sm">Come Say Hi</span>
+<h2 class="text-5xl font-headline font-extrabold text-primary">Find Us In Your Neighborhood</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+<div>
+<h4 class="font-bold text-primary mb-1 text-lg">East Marredpally (Main Hub)</h4>
+<p class="text-on-surface-variant">10/2-197 to 199, Shop No. 2, Ground Floor, Nehru Nagar, Entrenchment Road, Secunderabad, Hyderabad, Telangana</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="explore">explore</span>
+<div>
+<h4 class="font-bold text-primary mb-1">Other Locations</h4>
+<p class="text-on-surface-variant">Begum Bazar • Malakpet • AS Rao Nagar</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="call">call</span>
+<div>
+<h4 class="font-bold text-primary mb-1">Call Us</h4>
+<p class="text-on-surface-variant">+91 96529 29252</p>
+</div>
+</div>
+</div>
+<div class="pt-4 flex gap-4">
+<button class="bg-secondary text-on-secondary px-8 py-3 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="map">map</span> Get Directions
+                        </button>
+<button class="bg-tertiary-fixed text-on-tertiary-fixed px-8 py-3 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-transform">
+                             WhatsApp Now
+                        </button>
+</div>
+</div>
+<div class="rounded-3xl overflow-hidden shadow-2xl relative min-h-[400px]">
+<img alt="Map location view" class="absolute inset-0 w-full h-full object-cover" data-alt="Google maps view of East Marredpally Hyderabad" data-location="East Marredpally, Secunderabad" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8A7DNBsvppW0OuSxqDTQW-sbkr3NmHd3UiFMWI4VicW_QH4W7Vr6bfp9klQ7gj-1hrbBhZ-sFfbhFvYLgCHZt0rD5CSUJYjhtq4PmZaWAWFNKtk6lmGYTntaUvelXLFI-7n-QsWXnPLFXPfFKIoiJbjIxMeQsF18h-f9DUNC4boR3dGdNIISLp39RQGU_0z8P0IszI4gW35I2pQ3XvfV0Hnsjhk1EL1bX8_bUgP6ZwEn5--SXMVSsTvhE5KaBNX9GH3yLB12TJJA2"/>
+<div class="absolute inset-0 bg-primary/20 pointer-events-none"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#f5ede1] dark:bg-[#1a1313] w-full rounded-t-3xl mt-12 font-body text-sm leading-relaxed text-[#3c2f2f] dark:text-[#e9e1d6]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-7xl mx-auto">
+<div class="space-y-6">
+<a class="text-xl font-bold text-[#3c2f2f] dark:text-[#f5ede1] uppercase italic font-headline" href="#">Roasted Cream</a>
+<p class="text-[#3c2f2f]/70 dark:text-[#e9e1d6]/70">The Food Cafe – Your favorite neighborhood spot for artisanal desserts and comforting fast food.</p>
+<div class="flex gap-4">
+<a class="text-[#3c2f2f]/70 dark:text-[#e9e1d6]/70 hover:text-[#99462a] transition-all" href="#"><span class="material-symbols-outlined" data-icon="camera">camera</span></a>
+<a class="text-[#3c2f2f]/70 dark:text-[#e9e1d6]/70 hover:text-[#99462a] transition-all" href="#"><span class="material-symbols-outlined" data-icon="facebook">social_leaderboard</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-[#3c2f2f]/70 dark:text-[#e9e1d6]/70 hover:text-[#99462a] underline-offset-4 hover:underline" href="#">Privacy Policy</a></li>
+<li><a class="text-[#3c2f2f]/70 dark:text-[#e9e1d6]/70 hover:text-[#99462a] underline-offset-4 hover:underline" href="#">Terms of Service</a></li>
+<li><a class="text-[#3c2f2f]/70 dark:text-[#e9e1d6]/70 hover:text-[#99462a] underline-offset-4 hover:underline" href="#">Delivery Partners</a></li>
+<li><a class="text-[#3c2f2f]/70 dark:text-[#e9e1d6]/70 hover:text-[#99462a] underline-offset-4 hover:underline" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-6">Our Menus</h4>
+<ul class="space-y-4">
+<li class="text-[#3c2f2f]/70 dark:text-[#e9e1d6]/70">Desserts &amp; Roasted Creams</li>
+<li class="text-[#3c2f2f]/70 dark:text-[#e9e1d6]/70">Fusion Pizzas</li>
+<li class="text-[#3c2f2f]/70 dark:text-[#e9e1d6]/70">Momos &amp; Starters</li>
+<li class="text-[#3c2f2f]/70 dark:text-[#e9e1d6]/70">Iced Beverages</li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-6">Connect</h4>
+<p class="text-[#3c2f2f]/70 dark:text-[#e9e1d6]/70 mb-4">@roastedcream_hyd</p>
+<div class="flex gap-4 items-center">
+<img alt="Swiggy" class="h-4 grayscale" data-alt="Swiggy footer icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB99ZFo_FThlUkRE7UUpbGkBDoVfZfL9Q43CaWpv1cJdfFoNQ2hDmC5X3Ben4et4mozvgMvzLUiuncW1e9p5waKE34Wh7DW-ilLe0D0GJNK6nkHiYfPpYUMVLDCA8_6s8DUCBhO5jDOQxUaETxgzLRtxR4IyV64CYV4HktzkHGKeoEvtpf5UUI9cMKfopN0RKcax-UcHyeDyK5SfoFb1UzcSnbsreI3LqwgAO_YmPZY498jWaijMc6K55YJsXaP4Bx5gEMW0n3Tf-ht"/>
+<img alt="Zomato" class="h-4 grayscale" data-alt="Zomato footer icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyRXAc8eNIllvIe9eZGmCmADtJTD3N-QJGuJeFsNMzpVA9UOrGMj05t6IdaomV3UeQNalDmRtHMPPQLY4YJR6tSEAFf183o0MDR0cwFgwQaPafZvrdmjiVAs8cicJCQDRD5SmHCMCec2i6CufRa8zqFpjNhvzcTxLDVVp1okts67hn1aNrHOXDUhJfyJ66nvJRBma0z64Ibp8WWW1nukqtA_XasAoBCNeYX6Y0-l-EZ-qNXKpSSq5q4NbWXigV9wTecU-IwRtR03Il"/>
+</div>
+</div>
+</div>
+<div class="border-t border-[#3c2f2f]/10 dark:border-white/10 px-12 py-8 max-w-7xl mx-auto text-center">
+<p>© 2024 Roasted Cream – The Food Cafe. All rights reserved.</p>
+</div>
+</footer>
+<!-- SideNavBar (Floating Elements) -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4">
+<!-- Tab 2: Order Status -->
+<div class="group flex items-center gap-3">
+<span class="bg-[#fff8f1] text-[#3c2f2f] px-4 py-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity font-headline font-medium">Order Status</span>
+<button class="bg-[#f5ede1] text-[#3c2f2f] rounded-full p-4 shadow-xl shadow-[#3c2f2f]/10 hover:scale-110 transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="delivery_dining">delivery_dining</span>
+</button>
+</div>
+<!-- Tab 1: WhatsApp Chat -->
+<div class="group flex items-center gap-3">
+<span class="bg-[#fff8f1] text-[#3c2f2f] px-4 py-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity font-headline font-medium">WhatsApp Chat</span>
+<button class="bg-[#99462a] text-white rounded-full p-4 shadow-xl shadow-[#3c2f2f]/10 hover:scale-110 transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span>
+</button>
+</div>
+</div>
+</body></html>

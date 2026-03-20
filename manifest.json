@@ -1,0 +1,37 @@
+{
+  "name": "Roasted Cream – The Food Cafe",
+  "short_name": "Roasted Cream",
+  "description": "Hyderabad's cosiest cafe. Desserts, Pizzas, Momos & more in East Marredpally.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff8f1",
+  "theme_color": "#3c2f2f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "shopping"],
+  "shortcuts": [
+    {
+      "name": "View Menu",
+      "url": "/#menu",
+      "description": "Browse our full menu"
+    },
+    {
+      "name": "Order on WhatsApp",
+      "url": "https://wa.me/919652929252?text=Hi%2C%20I%20want%20to%20order%20from%20Roasted%20Cream!",
+      "description": "Send us your order via WhatsApp"
+    }
+  ]
+}
