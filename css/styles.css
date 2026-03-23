@@ -7,9 +7,23 @@
 
 /* ─── Base Reset ─── */
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth; /* Ensure smooth scrolling globally */
+}
+body {
+  min-height: 100vh;
+  position: relative;
+}
 img, video { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
+
+/* ─── Avoid Layout Jump when Modal Opens/Closes ─── */
+body.modal-open {
+  overflow: hidden;
+  /* prevent scroll chaining and bounce */
+  overscroll-behavior: none;
+}
 
 /* ─── Design Tokens (CSS Variables) ─── */
 :root {
