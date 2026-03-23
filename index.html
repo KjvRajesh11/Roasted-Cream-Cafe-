@@ -290,7 +290,7 @@
               style="background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.3);backdrop-filter:blur(8px)">
               🍽 Zomato
             </a>
-        </div>
+          </div>
           <!-- Delivery logos -->
           <div class="flex items-center gap-5 flex-wrap">
             <span class="text-white/60 text-xs uppercase tracking-widest font-medium">Free delivery via</span>
@@ -863,6 +863,9 @@
               required />
             <button type="submit" id="btn-verify-otp"
               class="btn-primary w-full justify-center py-3 text-[0.95rem]">Verify & Continue</button>
+            <div id="otp-timer-container" class="text-xs font-medium text-on-surface-variant text-center mt-2">
+              OTP expires in <span id="otp-timer">30</span>s
+            </div>
             <button type="button" id="btn-change-phone"
               class="text-xs font-medium text-secondary hover:underline text-center mt-1">Change Phone Number</button>
           </form>

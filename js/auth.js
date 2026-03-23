@@ -6,6 +6,44 @@ import { showToast } from './utils.js';
 
 let authCallback = null;
 let currentPhone = '';
+let otpCountdownInterval = null;
+let otpTimeLeft = 30;
+
+function startOtpCountdown() {
+  clearInterval(otpCountdownInterval);
+  otpTimeLeft = 30;
+  const timerContainer = document.getElementById('otp-timer-container');
+  if (timerContainer) {
+    timerContainer.innerHTML = `OTP expires in <span id="otp-timer">30</span>s`;
+  }
+  
+  otpCountdownInterval = setInterval(() => {
+    otpTimeLeft--;
+    const span = document.getElementById('otp-timer');
+    if (span) span.textContent = otpTimeLeft;
+    
+    if (otpTimeLeft <= 0) {
+      clearInterval(otpCountdownInterval);
+      if (timerContainer) {
+        timerContainer.innerHTML = `<span class="text-error">OTP expired</span> <button type="button" id="btn-resend-otp" class="text-secondary hover:underline ml-2">Resend</button>`;
+        document.getElementById('btn-resend-otp')?.addEventListener('click', async () => {
+          showToast('Resending OTP...', 'info');
+          const { error } = await signInWithOtp(currentPhone);
+          if (!error) {
+            showToast('OTP resent via SMS', 'success');
+            startOtpCountdown();
+          } else {
+            showToast(error.message, 'error');
+          }
+        });
+      }
+    }
+  }, 1000);
+}
+
+function stopOtpCountdown() {
+  clearInterval(otpCountdownInterval);
+}
 
 export function openLoginModal(onSuccess = null) {
   authCallback = onSuccess;
@@ -26,6 +64,7 @@ export function openLoginModal(onSuccess = null) {
 }
 
 export function closeLoginModal() {
+  stopOtpCountdown();
   const modal = document.getElementById('login-modal');
   const inner = document.getElementById('login-modal-inner');
   if (!modal) return;
@@ -38,6 +77,7 @@ export function closeLoginModal() {
     modal.classList.remove('flex');
     modal.classList.add('hidden');
     document.body.style.overflow = '';
+    document.body.classList.remove('modal-open');
   }, 320);
 }
 
@@ -176,11 +216,18 @@ document.addEventListener('DOMContentLoaded', () => {
         otpForm.classList.add('flex');
         document.getElementById('otp-phone-display').textContent = '+91 ' + num.slice(-10);
         setTimeout(() => otpInput.focus(), 100);
+        startOtpCountdown();
       }
     });
 
     otpForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      
+      if (otpTimeLeft <= 0) {
+        showToast('OTP expired', 'error');
+        return;
+      }
+      
       const otp = otpInput.value.trim();
       if (otp.length < 4) {
         showToast('Enter complete OTP', 'error');
@@ -189,20 +236,32 @@ document.addEventListener('DOMContentLoaded', () => {
       verifyBtn.disabled = true;
       verifyBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[1.2rem]">progress_activity</span> Verifying...';
       
-      const { error } = await verifyOtp(currentPhone, otp);
+      const response = await verifyOtp(currentPhone, otp);
+      console.log('Verify OTP Response:', response);
+      const { data, error } = response;
       
       verifyBtn.disabled = false;
       verifyBtn.innerHTML = 'Verify & Continue';
 
-      if (error && error.message.indexOf('Local') === -1) {
-        showToast(error.message, 'error');
-      } else {
-        showToast('Welcome back!', 'success');
+      if (error) {
+        let msg = error.message;
+        if (msg.toLowerCase().includes('expired') || msg.toLowerCase().includes('invalid')) {
+          msg = 'Invalid OTP';
+        }
+        showToast(msg, 'error');
+      } else if (data && data.session) {
+        stopOtpCountdown();
+        showToast('Welcome!', 'success');
         handleLoginSuccess();
+      } else {
+        showToast('Verification failed. Try again.', 'error');
       }
     });
 
-    changeBtn.addEventListener('click', resetAuthForms);
+    changeBtn.addEventListener('click', () => {
+      stopOtpCountdown();
+      resetAuthForms();
+    });
   }
 
   if (document.getElementById('btn-google-login')) {
