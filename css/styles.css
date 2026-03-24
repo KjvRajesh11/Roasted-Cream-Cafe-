@@ -89,6 +89,25 @@ body.modal-open {
   box-shadow: 0 2px 24px rgba(60, 47, 47, 0.08);
 }
 
+/* ─── Navbar Transparent State (Top) Override ─── */
+#navbar:not(.scrolled) nav .text-primary-container,
+#navbar:not(.scrolled) nav .text-on-surface-variant,
+#navbar:not(.scrolled) nav .text-secondary {
+  color: #ffffff !important;
+}
+#navbar:not(.scrolled) nav .bg-secondary,
+#navbar:not(.scrolled) nav .bg-surface-container {
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+#navbar:not(.scrolled) nav .hover\:text-secondary:hover {
+  color: #e8a87c !important; /* Soft warm gradient color */
+}
+#navbar:not(.scrolled) nav .hover\:bg-surface-container:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
 /* Mobile menu */
 .mobile-menu-closed {
   max-height: 0;
