@@ -73,7 +73,8 @@ const OUTLETS = [
     address: 'Ground Floor, Near SBI Bank, East Marredpally, Secunderabad, Hyderabad – 500026',
     phone: '+91 96529 29252',
     mapUrl: 'https://maps.app.goo.gl/sXCRsbH22yW2jnoCA',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2!2d78.5!3d17.44!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI2JzI0LjAiTiA3OMKwMzAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2872390234193!2d78.5020755!3d17.4459637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9a3e3e5f410d%3A0x86bd6f54c9a0980c!2sEast%20Marredpally%2C%20Secunderabad%2C%20Telangana%20500026!5e0!3m2!1sen!2sin!4v1714120000000!5m2!1sen!2sin',
+    photo: 'images/outlet-marredpally.jpg',
     hours: 'Mon–Sun: 11 AM – 11 PM',
   },
   {
@@ -83,6 +84,7 @@ const OUTLETS = [
     phone: '+91 96529 29252',
     mapUrl: 'https://maps.google.com/?q=Malkajgiri+Hyderabad',
     mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.0!2d78.53!3d17.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI3JzAwLjAiTiA3OMKwMzEnNDguMCJF!5e0!3m2!1sen!2sin!4v1620000000001!5m2!1sen!2sin',
+    photo: 'images/cozy-ambiance.jpg',
     hours: 'Mon–Sun: 11 AM – 11 PM',
   },
   {
@@ -92,6 +94,7 @@ const OUTLETS = [
     phone: '+91 96529 29252',
     mapUrl: 'https://maps.google.com/?q=Tarnaka+Hyderabad',
     mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3!2d78.52!3d17.43!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI1JzQ4LjAiTiA3OMKwMzEnMTIuMCJF!5e0!3m2!1sen!2sin!4v1620000000002!5m2!1sen!2sin',
+    photo: 'images/cozy-ambiance.jpg',
     hours: 'Mon–Sun: 11 AM – 11 PM',
   },
   {
@@ -101,6 +104,7 @@ const OUTLETS = [
     phone: '+91 96529 29252',
     mapUrl: 'https://maps.google.com/?q=Uppal+Hyderabad',
     mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5!2d78.56!3d17.40!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI0JzAwLjAiTiA3OMKwMzMnMzYuMCJF!5e0!3m2!1sen!2sin!4v1620000000003!5m2!1sen!2sin',
+    photo: 'images/cozy-ambiance.jpg',
     hours: 'Mon–Sun: 11 AM – 10:30 PM',
   },
 ];
@@ -119,52 +123,61 @@ function initOutletSelector() {
   `).join('');
 
   function renderOutlet(outlet) {
+    const photoHtml = outlet.photo ? `
+      <img src="${outlet.photo}" alt="${outlet.name}" class="w-full h-48 md:h-64 object-cover rounded-3xl shadow-ambient-lg border border-outline-variant/20" loading="lazy">
+    ` : '';
+    
     details.innerHTML = `
       <div class="outlet-card-inner">
-        <div class="space-y-4">
-          <div class="location-info-card">
-            <div class="flex items-start gap-4">
-              <span class="material-symbols-outlined text-secondary text-2xl mt-0.5" style="font-variation-settings:'FILL' 1">location_on</span>
-              <div>
-                <h3 class="font-display font-700 text-primary-container text-base mb-1">${outlet.name} Outlet</h3>
-                <p class="text-on-surface-variant text-sm">${outlet.address}</p>
+        <div class="grid md:grid-cols-2 gap-8 items-stretch w-full mb-4">
+          <div class="space-y-4">
+            <div class="location-info-card">
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary text-2xl mt-0.5" style="font-variation-settings:'FILL' 1">location_on</span>
+                <div>
+                  <h3 class="font-display font-700 text-primary-container text-base mb-1">${outlet.name} Outlet</h3>
+                  <p class="text-on-surface-variant text-sm">${outlet.address}</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="location-info-card">
-            <div class="flex items-start gap-4">
-              <span class="material-symbols-outlined text-secondary text-2xl mt-0.5" style="font-variation-settings:'FILL' 1">call</span>
-              <div>
-                <h3 class="font-display font-700 text-primary-container text-base mb-1">Phone</h3>
-                <a href="tel:${outlet.phone.replace(/\s/g,'')}" class="text-secondary font-medium hover:underline">${outlet.phone}</a>
+            <div class="location-info-card">
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary text-2xl mt-0.5" style="font-variation-settings:'FILL' 1">call</span>
+                <div>
+                  <h3 class="font-display font-700 text-primary-container text-base mb-1">Phone</h3>
+                  <a href="tel:${outlet.phone.replace(/\s/g,'')}" class="text-secondary font-medium hover:underline">${outlet.phone}</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="location-info-card">
-            <div class="flex items-start gap-4">
-              <span class="material-symbols-outlined text-secondary text-2xl mt-0.5" style="font-variation-settings:'FILL' 1">schedule</span>
-              <div>
-                <h3 class="font-display font-700 text-primary-container text-base mb-1">Hours</h3>
-                <p class="text-on-surface-variant text-sm">${outlet.hours}</p>
-                <div data-open-indicator class="inline-flex items-center gap-1.5 mt-1"></div>
+            <div class="location-info-card">
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary text-2xl mt-0.5" style="font-variation-settings:'FILL' 1">schedule</span>
+                <div>
+                  <h3 class="font-display font-700 text-primary-container text-base mb-1">Hours</h3>
+                  <p class="text-on-surface-variant text-sm">${outlet.hours}</p>
+                  <div data-open-indicator class="inline-flex items-center gap-1.5 mt-1"></div>
+                </div>
               </div>
             </div>
+            <div class="flex gap-3 flex-wrap mt-2">
+              <a href="${outlet.mapUrl}" target="_blank" rel="noopener" class="btn-primary">
+                <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1">directions</span>
+                Get Directions
+              </a>
+              <a href="tel:${outlet.phone.replace(/\s/g,'')}" class="btn-secondary">
+                <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1">call</span>
+                Call Outlet
+              </a>
+            </div>
           </div>
-          <div class="flex gap-3 flex-wrap">
-            <a href="${outlet.mapUrl}" target="_blank" rel="noopener" class="btn-primary">
-              <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1">directions</span>
-              Get Directions
-            </a>
-            <a href="tel:${outlet.phone.replace(/\s/g,'')}" class="btn-secondary">
-              <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1">call</span>
-              Call Outlet
-            </a>
+          <div class="flex flex-col gap-6">
+            ${photoHtml}
+            <div class="rounded-3xl overflow-hidden shadow-ambient-lg aspect-[4/3] w-full border border-outline-variant/20">
+              <iframe src="${outlet.mapEmbed}" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      title="${outlet.name} Roasted Cream location map"></iframe>
+            </div>
           </div>
-        </div>
-        <div class="rounded-3xl overflow-hidden shadow-ambient-lg aspect-[4/3.5] w-full mt-6 md:mt-0">
-          <iframe src="${outlet.mapEmbed}" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  title="${outlet.name} Roasted Cream location map"></iframe>
         </div>
       </div>
     `;
